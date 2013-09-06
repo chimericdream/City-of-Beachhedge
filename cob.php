@@ -31,3 +31,8 @@ echo '                                                            @%          @%
 echo '                                                          :"          :"                              ^"===*"`' . "\n\n";
 echo "                                                      By: Bill Parrott\n";
 echo "                                                     EECS 581, Fall 2013\n";
+
+echo "\n\n";
+
+echo 'Welcome to the world of Pannotia and the City of Beachhedge. Look around, explore, and have fun!' . "\n\n";
+
