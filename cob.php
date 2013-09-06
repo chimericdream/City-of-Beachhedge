@@ -36,3 +36,6 @@ echo "\n\n";
 
 echo 'Welcome to the world of Pannotia and the City of Beachhedge. Look around, explore, and have fun!' . "\n\n";
 
+require_once dirname(__FILE__) . '/controllers/Game.php';
+$game = new Game();
+$game->initialize()->run();
