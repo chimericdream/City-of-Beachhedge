@@ -4,11 +4,21 @@ require_once dirname(__FILE__) . '/../models/Room.php';
 require_once dirname(__FILE__) . '/../models/Character.php';
 require_once dirname(__FILE__) . '/../models/Entity.php';
 
-define('GAME_TEXT_COLOR',      "\033[00;37;40m"); // white, not bright
-define('GAME_INPUT_COLOR',     "\033[01;37;40m"); // white, bright
-define('GAME_PROMPT_COLOR',    "\033[01;36;40m"); // teal, bright
-define('GAME_COMMAND_COLOR',   "\033[01;32;40m"); // green, bright
-define('CHARACTER_NAME_COLOR', "\033[01;33;40m"); // yellow, bright
+define('GREEN',         "\033[00;32;40m");
+define('GREEN_BRIGHT',  "\033[01;32;40m");
+define('TEAL',          "\033[00;36;40m");
+define('TEAL_BRIGHT',   "\033[01;36;40m");
+define('WHITE',         "\033[00;37;40m");
+define('WHITE_BRIGHT',  "\033[01;37;40m");
+define('YELLOW',        "\033[00;33;40m");
+define('YELLOW_BRIGHT', "\033[01;33;40m");
+
+define('GAME_TEXT_COLOR',        WHITE);
+define('GAME_INPUT_COLOR',       WHITE_BRIGHT);
+define('GAME_PROMPT_COLOR',      TEAL_BRIGHT);
+define('GAME_COMMAND_COLOR',     GREEN_BRIGHT);
+define('GAME_SEC_COMMAND_COLOR', GREEN);
+define('CHARACTER_NAME_COLOR',   YELLOW_BRIGHT);
 
 class Game {
     const STANDARD_COMMAND  = true;
@@ -46,6 +56,7 @@ class Game {
                 break;
             } else if ($c['command'] == 'help' || $c['command'] == 'commands') {
                 $this->_showHelpScreen();
+                continue;
             }
         }
     }
@@ -67,6 +78,17 @@ class Game {
     }
 
     private function _showHelpScreen() {
+        echo "\n" . YELLOW_BRIGHT . 'City of Beachhedge: Help Screen' . GAME_TEXT_COLOR . "\n"
+           . '   ' . GAME_COMMAND_COLOR . 'help' . GAME_TEXT_COLOR . ',' . GAME_COMMAND_COLOR . 'commands' . GAME_TEXT_COLOR . "                   Show this screen\n"
+           . '   ' . GAME_COMMAND_COLOR . 'quit' . GAME_TEXT_COLOR . ',' . GAME_COMMAND_COLOR . 'q' . GAME_TEXT_COLOR . ',' . GAME_COMMAND_COLOR . 'exit' . GAME_TEXT_COLOR . "                     Exit the game\n"
+           . '   ' . GAME_COMMAND_COLOR . 'n' . GAME_TEXT_COLOR . ',' . GAME_COMMAND_COLOR . 's' . GAME_TEXT_COLOR . ',' . GAME_COMMAND_COLOR . 'e' . GAME_TEXT_COLOR . ',' . GAME_COMMAND_COLOR . 'w' . GAME_TEXT_COLOR . "                         Move north, south, east or west, respectively\n"
+           . '   ' . GAME_COMMAND_COLOR . 'get' . GAME_SEC_COMMAND_COLOR . ' <object>' . GAME_TEXT_COLOR . "                    Pick up <object>\n"
+           . '   ' . GAME_COMMAND_COLOR . 'get' . GAME_SEC_COMMAND_COLOR . ' <item> <container>' . GAME_TEXT_COLOR . "          Get <item> from <container>\n"
+           . '   ' . GAME_COMMAND_COLOR . 'put' . GAME_SEC_COMMAND_COLOR . ' <item> <container>' . GAME_TEXT_COLOR . "          Put <item> in <container>\n"
+           . '   ' . GAME_COMMAND_COLOR . 'open' . GAME_TEXT_COLOR . '/' . GAME_COMMAND_COLOR . 'close' . GAME_SEC_COMMAND_COLOR . ' <container>' . GAME_TEXT_COLOR . "          Open or close <container>\n"
+           . '   ' . GAME_COMMAND_COLOR . 'drop' . GAME_SEC_COMMAND_COLOR . ' <object>' . GAME_TEXT_COLOR . "                   Drop <object>\n"
+           . '   ' . GAME_COMMAND_COLOR . 'kill' . GAME_SEC_COMMAND_COLOR . ' <monster>' . GAME_TEXT_COLOR . "                  Attack <monster>\n";
         
+        echo "\n";
     }
 }
