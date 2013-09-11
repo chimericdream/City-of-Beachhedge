@@ -34,8 +34,6 @@ echo "                                                     EECS 581, Fall 2013\n
 
 echo "\033[00;37;40m\n\n";
 
-echo 'Welcome to the world of Pannotia and the City of Beachhedge. Look around, explore, and have fun!' . "\n\n";
-
 require_once dirname(__FILE__) . '/controllers/Game.php';
 $game = new Game();
 $game->initialize()->run();
