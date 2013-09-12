@@ -1,16 +1,18 @@
 <?php
+require_once dirname(__FILE__) . '/../models/CobCommon.php';
 require_once dirname(__FILE__) . '/Command.php';
 require_once dirname(__FILE__) . '/../models/Room.php';
 require_once dirname(__FILE__) . '/../models/Character.php';
 require_once dirname(__FILE__) . '/../models/Entity.php';
 
-class Game {
+class Game extends CobCommon {
     const STANDARD_COMMAND  = true;
     const FULL_LINE_COMMAND = false;
 
     public $characterName = '';
 
-    private $_input = NULL;
+    private $_input       = NULL;
+    private $_currentRoom = NULL;
 
     public function __construct() {
         $this->_input = fopen("php://stdin","r");
@@ -32,7 +34,10 @@ class Game {
            . "Welcome to the world of Pannotia and the City of Beachhedge. Look around, explore, and have fun! If\n"
            . 'you need help at any time, type ' . GAME_COMMAND_COLOR . 'help' . GAME_TEXT_COLOR . ' or ' . GAME_COMMAND_COLOR . 'commands' . GAME_TEXT_COLOR . ".\n\n";
 
+        $this->_currentRoom = new Room(1);
         while (true) {
+            $this->_currentRoom->display();
+
             echo GAME_PROMPT_COLOR . 'Command: ' . GAME_INPUT_COLOR;
             $c = $this->_getInput();
             echo GAME_TEXT_COLOR;
@@ -44,9 +49,9 @@ class Game {
                 continue;
             }
 
-            $cmd = new Command($c);
+            $cmd = new Command($c, $this);
             if ($cmd->validateCommand()) {
-                
+                $cmd->runCommand();
             }
         }
     }
@@ -78,5 +83,19 @@ class Game {
            . '   ' . GAME_COMMAND_COLOR . 'open' . GAME_TEXT_COLOR . '/' . GAME_COMMAND_COLOR . 'close' . GAME_SEC_COMMAND_COLOR . ' <container>' . GAME_TEXT_COLOR . "          Open or close <container>\n"
            . '   ' . GAME_COMMAND_COLOR . 'drop' . GAME_SEC_COMMAND_COLOR . ' <object>' . GAME_TEXT_COLOR . "                   Drop <object>\n"
            . '   ' . GAME_COMMAND_COLOR . 'kill' . GAME_SEC_COMMAND_COLOR . ' <monster>' . GAME_TEXT_COLOR . "                  Attack <monster>\n";
+
+       echo "\n";
+    }
+
+    public function presentInRoom($keyword) {
+        return false;
+    }
+
+    public function heldInHand($keyword) {
+        return false;
+    }
+
+    public function inContainer($keyword, $container) {
+        return false;
     }
 }
