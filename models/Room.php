@@ -1,12 +1,14 @@
 <?php
 class Room extends CobCommon {
-    public $name        = '';
-    public $description = '';
-    public $exits       = array();
-    public $items       = array();
-    public $mobs        = array();
+    protected $roomID      = -1;
+    protected $name        = '';
+    protected $description = '';
+    protected $exits       = array();
+    protected $items       = array();
+    protected $mobs        = array();
 
     public function __construct($roomNum) {
+        $this->roomID = $roomNum;
         $roomNum = str_pad($roomNum, 4, '0', STR_PAD_LEFT);
         $roomArr = json_decode(file_get_contents(dirname(__FILE__) . '/../data/rooms/' . $roomNum . '.txt'), true);
 
@@ -14,22 +16,26 @@ class Room extends CobCommon {
         $this->description = $this->replaceColors($roomArr['description']);
         $this->exits       = $roomArr['exits'];
 
-        foreach ($roomArr['items'] as $key => $item) {
-            $type = ucfirst($item['type']);
-            $classname = "Entity_Item_{$type}";
-            if (class_exists($classname)) {
-                $i = new $classname($item);
-                $this->items[$key] = $i;
+        if (!empty($roomArr['items'])) {
+            foreach ($roomArr['items'] as $key => $item) {
+                $type = ucfirst($item['type']);
+                $classname = "Entity_Item_{$type}";
+                if (class_exists($classname)) {
+                    $i = new $classname($item);
+                    $this->items[$key] = $i;
+                }
             }
         }
         $this->description = $this->replaceEntityReferences($this->description, $this->items);
 
-        foreach ($roomArr['mobs'] as $key => $mob) {
-            $type = ucfirst($mob['type']);
-            $classname = "Entity_Mob_{$type}";
-            if (class_exists($classname)) {
-                $m = new $classname($mob);
-                $this->mobs[$key] = $m;
+        if (!empty($roomArr['mobs'])) {
+            foreach ($roomArr['mobs'] as $key => $mob) {
+                $type = ucfirst($mob['type']);
+                $classname = "Entity_Mob_{$type}";
+                if (class_exists($classname)) {
+                    $m = new $classname($mob);
+                    $this->mobs[$key] = $m;
+                }
             }
         }
         $this->description = $this->replaceEntityReferences($this->description, $this->mobs);
@@ -60,5 +66,17 @@ class Room extends CobCommon {
         }
 
         //var_dump($this);
+    }
+
+    public function hasExit($direction) {
+        return array_key_exists($direction, $this->exits);
+    }
+
+    public function getRoomNumber($direction) {
+        if (!$this->hasExit($direction)) {
+            //@TODO: display error
+            return $this->roomID;
+        }
+        return $this->exits[$direction];
     }
 }

@@ -11,6 +11,7 @@ class Game extends CobCommon {
 
     public $characterName = '';
 
+    private $_rooms       = array();
     private $_input       = NULL;
     private $_currentRoom = NULL;
 
@@ -23,6 +24,9 @@ class Game extends CobCommon {
     }
 
     public function initialize() {
+        for ($r = 1; $r <=5; $r++) {
+            $this->_rooms[$r] = new Room($r);
+        }
         return $this;
     }
 
@@ -34,7 +38,7 @@ class Game extends CobCommon {
            . "Welcome to the world of Pannotia and the City of Beachhedge. Look around, explore, and have fun! If\n"
            . 'you need help at any time, type ' . GAME_COMMAND_COLOR . 'help' . GAME_TEXT_COLOR . ' or ' . GAME_COMMAND_COLOR . 'commands' . GAME_TEXT_COLOR . ".\n\n";
 
-        $this->_currentRoom = new Room(1);
+        $this->_currentRoom = $this->_rooms[1];
         while (true) {
             $this->_currentRoom->display();
 
@@ -111,5 +115,17 @@ class Game extends CobCommon {
 
     public function inContainer($keyword, $container) {
         return false;
+    }
+
+    public function changeRoom($roomID) {
+        if (!isset($this->_rooms[$roomID])) {
+            //@TODO: display error
+            exit;
+        }
+        $this->_currentRoom = $this->_rooms[$roomID];
+    }
+
+    public function getCurrentRoom() {
+        return $this->_currentRoom;
     }
 }

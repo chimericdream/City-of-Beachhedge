@@ -1,0 +1,1 @@
+{"name":"%TEAL_BRIGHT%Room 2","description":"Description for room 2","exits":{"s":1},"items":{},"mobs":{}}
