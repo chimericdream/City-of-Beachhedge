@@ -11,6 +11,8 @@ class Command {
         'close',
         'drop',
         'kill',
+        'exa',
+        'examine',
     );
 
     private $_cmd = NULL;
@@ -97,6 +99,18 @@ class Command {
                 }
                 $enemy = array_shift($this->_cmd['params']);
                 if (!$this->_game->presentInRoom($enemy)) {
+                    echo ERROR_TEXT_COLOR . 'Nobody here by that name.' . GAME_TEXT_COLOR . "\n\n";
+                    return;
+                }
+                break;
+            case 'exa':
+            case 'examine':
+                if (empty($this->_cmd['params'])) {
+                    echo ERROR_TEXT_COLOR . 'What do you want to examine?' . GAME_TEXT_COLOR . "\n\n";
+                    return;
+                }
+                $entity = array_shift($this->_cmd['params']);
+                if (!$this->_game->presentInRoom($entity) && !$this->_game->heldInHand($entity)) {
                     echo ERROR_TEXT_COLOR . 'Nobody here by that name.' . GAME_TEXT_COLOR . "\n\n";
                     return;
                 }
