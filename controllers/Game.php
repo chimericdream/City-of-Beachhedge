@@ -88,6 +88,20 @@ class Game extends CobCommon {
     }
 
     public function presentInRoom($keyword) {
+        foreach ($this->_currentRoom->items as $item) {
+            foreach ($item->keywords as $k) {
+                if ($k == $keyword) {
+                    return true;
+                }
+            }
+        }
+        foreach ($this->_currentRoom->mobs as $mob) {
+            foreach ($mob->keywords as $k) {
+                if ($k == $keyword) {
+                    return true;
+                }
+            }
+        }
         return false;
     }
 
