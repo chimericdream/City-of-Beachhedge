@@ -13,18 +13,35 @@ class Room extends CobCommon {
         $this->name        = $this->replaceColors($roomArr['name']);
         $this->description = $this->replaceColors($roomArr['description']);
         $this->exits       = $roomArr['exits'];
+
         foreach ($roomArr['items'] as $key => $item) {
             $type = ucfirst($item['type']);
             $classname = "Entity_Item_{$type}";
             if (class_exists($classname)) {
                 $i = new $classname($item);
-                $this->items[] = $i;
+                $this->items[$key] = $i;
             }
         }
-        var_dump($this);
+        $this->description = $this->replaceItemReferences($this->description, $this->items);
     }
 
     public function display() {
-        
+        echo $this->name . GAME_TEXT_COLOR . "\n";
+        echo $this->description . GAME_TEXT_COLOR . "\n";
+        echo WHITE . 'Exits:' . GAME_TEXT_COLOR;
+        $e = array();
+        foreach ($this->exits as $dir => $id) {
+            $e[] = $dir;
+        }
+        echo implode(',', $e);
+        echo "\n\n";
+        if (!empty($this->items)) {
+            foreach ($this->items as $i) {
+                echo $i->longDesc . "\n";
+            }
+            echo "\n";
+        }
+
+        //var_dump($this);
     }
 }
