@@ -9,7 +9,10 @@ class Entity extends CobCommon {
     public $longDesc;
     public $keywords;
 
+    protected $_defaults = array();
+
     public function __construct(array $data) {
+        $data = array_merge($this->_defaults, $data);
         $this->name      = empty($data['name'])      ? ''               : $this->replaceColors($data['name']);
         $this->shortName = empty($data['shortName']) ? $this->name      : $this->replaceColors($data['shortName']);
         $this->shortDesc = empty($data['shortDesc']) ? ''               : $this->replaceColors($data['shortDesc']);
