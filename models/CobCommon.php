@@ -45,9 +45,9 @@ abstract class CobCommon {
         return $input;
     }
 
-    protected function replaceItemReferences($input, array $items) {
-        foreach ($items as $key => $item) {
-            $input = str_replace('{' . $key . '}', $item->shortName, $input);
+    protected function replaceEntityReferences($input, array $entities) {
+        foreach ($entities as $key => $entity) {
+            $input = str_replace('{' . $key . '}', $entity->shortName, $input);
         }
         return $input;
     }

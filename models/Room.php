@@ -22,13 +22,23 @@ class Room extends CobCommon {
                 $this->items[$key] = $i;
             }
         }
-        $this->description = $this->replaceItemReferences($this->description, $this->items);
+        $this->description = $this->replaceEntityReferences($this->description, $this->items);
+
+        foreach ($roomArr['mobs'] as $key => $mob) {
+            $type = ucfirst($mob['type']);
+            $classname = "Entity_Mob_{$type}";
+            if (class_exists($classname)) {
+                $m = new $classname($mob);
+                $this->mobs[$key] = $m;
+            }
+        }
+        $this->description = $this->replaceEntityReferences($this->description, $this->mobs);
     }
 
     public function display() {
         echo $this->name . GAME_TEXT_COLOR . "\n";
         echo $this->description . GAME_TEXT_COLOR . "\n";
-        echo WHITE . 'Exits:' . GAME_TEXT_COLOR;
+        echo WHITE . 'Exits: ' . GAME_TEXT_COLOR;
         $e = array();
         foreach ($this->exits as $dir => $id) {
             $e[] = $dir;
@@ -39,6 +49,13 @@ class Room extends CobCommon {
             foreach ($this->items as $i) {
                 echo $i->longDesc . "\n";
             }
+        }
+        if (!empty($this->mobs)) {
+            foreach ($this->mobs as $m) {
+                echo $m->longDesc . "\n";
+            }
+        }
+        if (!empty($this->items) || !empty($this->mobs)) {
             echo "\n";
         }
 
