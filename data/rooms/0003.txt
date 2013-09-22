@@ -1,1 +1,21 @@
-{"name":"%TEAL_BRIGHT%Room 3","description":"Description for room 3","exits":{"n":1},"items":{},"mobs":{}}
+{
+  "name": "Room 1",
+  "description": "Description for room 1",
+  "exits": {
+    "n": 2,
+    "s": 3,
+    "e": 4,
+    "w": 5
+  },
+  "items": {
+    
+  },
+  "mobs": {
+    "person1": {
+      "type": "peasant"
+    },
+    "person2": {
+      "type": "warrior"
+    }
+  }
+}

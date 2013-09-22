@@ -1,0 +1,16 @@
+{
+  "name": "Room 4",
+  "description": "Description for room 4",
+  "exits": {
+    "n": 2,
+    "s": 3,
+    "e": 4,
+    "w": 5
+  },
+  "items": {
+    
+  },
+  "mobs": {
+    
+  }
+}
