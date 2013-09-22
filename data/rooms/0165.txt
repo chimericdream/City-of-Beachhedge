@@ -1,11 +1,10 @@
 {
-  "name": "Room 3",
-  "description": "Description for room 3",
+  "name": "%GREEN_BRIGHT%The City Park",
+  "description": "For a moment, you can almost forget the %DARK_GRAY%dinginess%GAME_TEXT_COLOR% of %YELLOW%Beachhedge%GAME_TEXT_COLOR% as you walk\namong the %RED_BRIGHT%f%YELLOW_BRIGHT%l%GREEN_BRIGHT%o%RED_BRIGHT%w%YELLOW_BRIGHT%e%GREEN_BRIGHT%r%RED_BRIGHT%s%GAME_TEXT_COLOR%. The park is ringed by %GREEN%tall trees%GAME_TEXT_COLOR%, blocking any view of the\ndecrepit city and giving the park a feeling of %TEAL%tranquility%GAME_TEXT_COLOR%.",
   "exits": {
-    "n": 2,
-    "s": 3,
-    "e": 4,
-    "w": 5
+    "n": 152,
+    "s": 176,
+    "w": 164
   },
   "items": {
     

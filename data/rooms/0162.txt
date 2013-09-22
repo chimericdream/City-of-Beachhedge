@@ -1,11 +1,9 @@
 {
-  "name": "Room 3",
-  "description": "Description for room 3",
+  "name": "%GREEN_BRIGHT%At the Edge of a Small Field",
+  "description": "The grass is soft under your feet as you stroll about the park. A small clearing\nlies to the east, while the park entrance and city are down a path to the west.",
   "exits": {
-    "n": 2,
-    "s": 3,
-    "e": 4,
-    "w": 5
+    "e": 163,
+    "w": 161
   },
   "items": {
     

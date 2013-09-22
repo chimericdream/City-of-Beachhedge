@@ -1,11 +1,9 @@
 {
-  "name": "Room 3",
-  "description": "Description for room 3",
+  "name": "%GREEN%Entrance to the %GREEN_BRIGHT%City Park",
+  "description": "This seems to be the one place in the city where the ratio of undead to living\ncreatures is in favor of those with a pulse. A path leads eastward to a small\nfield where children can be seen playing.",
   "exits": {
-    "n": 2,
-    "s": 3,
-    "e": 4,
-    "w": 5
+    "e": 162,
+    "w": 160
   },
   "items": {
     
