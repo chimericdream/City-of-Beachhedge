@@ -64,8 +64,6 @@ class Room extends CobCommon {
         if (!empty($this->items) || !empty($this->mobs)) {
             echo "\n";
         }
-
-        //var_dump($this);
     }
 
     public function hasExit($direction) {
@@ -78,5 +76,13 @@ class Room extends CobCommon {
             return $this->roomID;
         }
         return $this->exits[$direction];
+    }
+
+    public function getItems() {
+        return $this->items;
+    }
+
+    public function getMobs() {
+        return $this->mobs;
     }
 }
