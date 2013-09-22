@@ -1,6 +1,6 @@
 {
   "name": "%GREEN%Entrance to the %GREEN_BRIGHT%City Park",
-  "description": "This seems to be the one place in the city where the ratio of undead to living\ncreatures is in favor of those with a pulse. A path leads eastward to a small\nfield where children can be seen playing.",
+  "description": "This seems to be the one place in the city where the ratio of %DARK_GRAY%undead%GAME_TEXT_COLOR% to living\ncreatures is in favor of those with a %MAGENTA%pulse%GAME_TEXT_COLOR%. A path leads eastward to a small\n%GREEN_BRIGHT%field%GAME_TEXT_COLOR% where children can be seen %YELLOW_BRIGHT%playing%GAME_TEXT_COLOR%.",
   "exits": {
     "e": 162,
     "w": 160

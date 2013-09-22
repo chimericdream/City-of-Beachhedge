@@ -1,6 +1,6 @@
 {
   "name": "%GREEN_BRIGHT%At the Edge of a Small Field",
-  "description": "The grass is soft under your feet as you stroll about the park. A small clearing\nlies to the east, while the park entrance and city are down a path to the west.",
+  "description": "The %GREEN%grass%GAME_TEXT_COLOR% is soft under your feet as you stroll about the park. A small %GREEN_BRIGHT%clearing\n%GAME_TEXT_COLOR%lies to the east, while the park entrance and %YELLOW_BRIGHT%city%GAME_TEXT_COLOR% are down a %DARK_GRAY%path%GAME_TEXT_COLOR% to the west.",
   "exits": {
     "e": 163,
     "w": 161
