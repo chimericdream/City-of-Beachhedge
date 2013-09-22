@@ -1,1 +1,1 @@
-{"name":"%TEAL_BRIGHT%The Town Square","description":"Some %YELLOW%long%GAME_TEXT_COLOR% description here. There is a {bag1} here.","exits":{"n":2,"s":3,"e":4,"w":5},"items":{"bag1":{"type":"container"}},"mobs":{"person1":{"type":"peasant"},"person2":{"type":"warrior"}}}
+{"name":"%TEAL_BRIGHT%The Town Square","description":"Some %YELLOW%long%GAME_TEXT_COLOR% description here.","exits":{"n":2,"s":3,"e":4,"w":5},"items":{},"mobs":{"person1":{"type":"peasant"},"person2":{"type":"warrior"}}}
