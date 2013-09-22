@@ -81,11 +81,11 @@ class Game extends CobCommon {
            . '   ' . GAME_COMMAND_COLOR . 'help' . GAME_TEXT_COLOR . ',' . GAME_COMMAND_COLOR . 'commands' . GAME_TEXT_COLOR . "                   Show this screen\n"
            . '   ' . GAME_COMMAND_COLOR . 'quit' . GAME_TEXT_COLOR . ',' . GAME_COMMAND_COLOR . 'q' . GAME_TEXT_COLOR . ',' . GAME_COMMAND_COLOR . 'exit' . GAME_TEXT_COLOR . "                     Exit the game\n"
            . '   ' . GAME_COMMAND_COLOR . 'n' . GAME_TEXT_COLOR . ',' . GAME_COMMAND_COLOR . 's' . GAME_TEXT_COLOR . ',' . GAME_COMMAND_COLOR . 'e' . GAME_TEXT_COLOR . ',' . GAME_COMMAND_COLOR . 'w' . GAME_TEXT_COLOR . "                         Move north, south, east or west, respectively\n"
-           . '   ' . GAME_COMMAND_COLOR . 'get' . GAME_SEC_COMMAND_COLOR . ' <object>' . GAME_TEXT_COLOR . "                    Pick up <object>\n"
-           . '   ' . GAME_COMMAND_COLOR . 'get' . GAME_SEC_COMMAND_COLOR . ' <item> <container>' . GAME_TEXT_COLOR . "          Get <item> from <container>\n"
-           . '   ' . GAME_COMMAND_COLOR . 'put' . GAME_SEC_COMMAND_COLOR . ' <item> <container>' . GAME_TEXT_COLOR . "          Put <item> in <container>\n"
+//           . '   ' . GAME_COMMAND_COLOR . 'get' . GAME_SEC_COMMAND_COLOR . ' <object>' . GAME_TEXT_COLOR . "                    Pick up <object>\n"
+//           . '   ' . GAME_COMMAND_COLOR . 'get' . GAME_SEC_COMMAND_COLOR . ' <item> <container>' . GAME_TEXT_COLOR . "          Get <item> from <container>\n"
+//           . '   ' . GAME_COMMAND_COLOR . 'put' . GAME_SEC_COMMAND_COLOR . ' <item> <container>' . GAME_TEXT_COLOR . "          Put <item> in <container>\n"
            . '   ' . GAME_COMMAND_COLOR . 'open' . GAME_TEXT_COLOR . '/' . GAME_COMMAND_COLOR . 'close' . GAME_SEC_COMMAND_COLOR . ' <container>' . GAME_TEXT_COLOR . "          Open or close <container>\n"
-           . '   ' . GAME_COMMAND_COLOR . 'drop' . GAME_SEC_COMMAND_COLOR . ' <object>' . GAME_TEXT_COLOR . "                   Drop <object>\n"
+//           . '   ' . GAME_COMMAND_COLOR . 'drop' . GAME_SEC_COMMAND_COLOR . ' <object>' . GAME_TEXT_COLOR . "                   Drop <object>\n"
            . '   ' . GAME_COMMAND_COLOR . 'kill' . GAME_SEC_COMMAND_COLOR . ' <monster>' . GAME_TEXT_COLOR . "                  Attack <monster>\n";
 
        echo "\n";
