@@ -1,21 +1,14 @@
 {
-  "name": "Room 1",
-  "description": "Description for room 1",
+  "name": "%BLUE_BRIGHT%The City Docks",
+  "description": "The smell of fish is almost overwhelming. Through the %TEAL%mist%GAME_TEXT_COLOR% rolling in from the\nocean, you can see dock workers milling about. Some are human, but the majority\nappear to be domesticated zombies, shuffling about like beasts of burden.",
   "exits": {
-    "n": 2,
-    "s": 3,
-    "e": 4,
-    "w": 5
+    "n": 44,
+    "s": 73
   },
   "items": {
     
   },
   "mobs": {
-    "person1": {
-      "type": "peasant"
-    },
-    "person2": {
-      "type": "warrior"
-    }
+    
   }
 }

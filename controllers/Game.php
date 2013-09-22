@@ -24,25 +24,25 @@ class Game extends CobCommon {
     }
 
     public function initialize() {
-        for ($r = 1; $r <=5; $r++) {
+        for ($r = 1; $r <=225; $r++) {
             $this->_rooms[$r] = new Room($r);
         }
         return $this;
     }
 
     public function run() {
-        echo GAME_PROMPT_COLOR . 'Please enter your name: ' . GAME_INPUT_COLOR;
+        echo TEAL_BRIGHT . 'Please enter your name: ' . GAME_INPUT_COLOR;
         $this->characterName = $this->_getInput(self::FULL_LINE_COMMAND);
 
         echo GAME_TEXT_COLOR . 'Hello, ' . CHARACTER_NAME_COLOR . $this->characterName . GAME_TEXT_COLOR . "!\n\n"
-           . "Welcome to the world of Pannotia and the City of Beachhedge. Look around, explore, and have fun! If\n"
-           . 'you need help at any time, type ' . GAME_COMMAND_COLOR . 'help' . GAME_TEXT_COLOR . ' or ' . GAME_COMMAND_COLOR . 'commands' . GAME_TEXT_COLOR . ".\n\n";
+           . "Welcome to the world of Pannotia and the City of Beachhedge. Look around,\n"
+           . 'explore, and have fun! If you need help at any time, type ' . GAME_COMMAND_COLOR . 'help' . GAME_TEXT_COLOR . ' or ' . GAME_COMMAND_COLOR . 'commands' . GAME_TEXT_COLOR . ".\n\n";
 
         $this->_currentRoom = $this->_rooms[1];
         while (true) {
             $this->_currentRoom->display();
 
-            echo GAME_PROMPT_COLOR . 'Command: ' . GAME_INPUT_COLOR;
+            echo GAME_PROMPT_COLOR . '?> ' . GAME_INPUT_COLOR;
             $c = $this->_getInput();
             echo GAME_TEXT_COLOR;
 

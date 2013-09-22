@@ -1,21 +1,12 @@
 {
-  "name": "Room 1",
-  "description": "Description for room 1",
+  "name": "%BLUE_BRIGHT%The Entrance to the City Docks",
+  "description": "As you step onto the pier, you feel the boards beneath your feet sway as the\nocean waves slosh against the supports. A gentle %TEAL%ocean mist%GAME_TEXT_COLOR% rolls in on the\nbreeze.",
   "exits": {
-    "n": 2,
-    "s": 3,
-    "e": 4,
-    "w": 5
+    "e": 47,
+    "w": 45
   },
   "items": {
-    
   },
   "mobs": {
-    "person1": {
-      "type": "peasant"
-    },
-    "person2": {
-      "type": "warrior"
-    }
   }
 }

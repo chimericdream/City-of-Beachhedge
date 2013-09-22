@@ -42,7 +42,7 @@ class Room extends CobCommon {
     }
 
     public function display() {
-        echo $this->name . GAME_TEXT_COLOR . "\n";
+        echo $this->name . WHITE . ' [Room #' . $this->roomID . ']' . GAME_TEXT_COLOR . "\n";
         echo $this->description . GAME_TEXT_COLOR . "\n";
         echo WHITE . 'Exits: ' . GAME_TEXT_COLOR;
         $e = array();

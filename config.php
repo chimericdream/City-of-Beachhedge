@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(-1);
+
 define('DARK_GRAY',      "\033[01;30;40m");
 define('BLUE',           "\033[00;34;40m");
 define('BLUE_BRIGHT',    "\033[01;34;40m");
@@ -17,7 +20,7 @@ define('YELLOW_BRIGHT',  "\033[01;33;40m");
 
 define('GAME_TEXT_COLOR',        WHITE);
 define('GAME_INPUT_COLOR',       WHITE_BRIGHT);
-define('GAME_PROMPT_COLOR',      TEAL_BRIGHT);
+define('GAME_PROMPT_COLOR',      DARK_GRAY);
 define('GAME_COMMAND_COLOR',     GREEN_BRIGHT);
 define('GAME_SEC_COMMAND_COLOR', GREEN);
 define('CHARACTER_NAME_COLOR',   YELLOW_BRIGHT);
