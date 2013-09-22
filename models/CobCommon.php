@@ -3,6 +3,11 @@ abstract class CobCommon {
     protected function replaceColors($input) {
         $input = str_replace(
             array(
+				'%DARK_GRAY%',
+				'%BLUE%',
+				'%BLUE_BRIGHT%',
+				'%MAGENTA%',
+				'%MAGENTA_BRIGHT%',
                 '%GREEN%',
                 '%GREEN_BRIGHT%',
                 '%RED%',
@@ -22,6 +27,11 @@ abstract class CobCommon {
                 '%ERROR_TEXT_COLOR%',
             ), 
             array(
+				DARK_GRAY,
+				BLUE,
+				BLUE_BRIGHT,
+				MAGENTA,
+				MAGENTA_BRIGHT,
                 GREEN,
                 GREEN_BRIGHT,
                 RED,
