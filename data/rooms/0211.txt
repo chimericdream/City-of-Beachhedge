@@ -1,11 +1,10 @@
 {
-  "name": "Room 4",
-  "description": "Description for room 4",
+  "name": "%YELLOW%The City Dump",
+  "description": "The makeshift path winds through the towering piles of %YELLOW%garbage%GAME_TEXT_COLOR%, and you can't\nhelp but wonder just why you are here. %RED%Rats%GAME_TEXT_COLOR% scurry away when you get close, and\nthe only other company you have is the occasional %DARK_GRAY%zombie%GAME_TEXT_COLOR% dumping a bin of %YELLOW%waste\n%GAME_TEXT_COLOR%onto one of the piles.",
   "exits": {
-    "n": 2,
-    "s": 3,
-    "e": 4,
-    "w": 5
+    "n": 207,
+    "s": 223,
+    "e": 212
   },
   "items": {
     

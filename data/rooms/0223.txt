@@ -1,11 +1,10 @@
 {
-  "name": "Room 4",
-  "description": "Description for room 4",
+  "name": "%DARK_GRAY%Entrance to the %YELLOW%City Dump",
+  "description": "You are nearly sick from the powerful odors rising from mounds of garbage. Why\nany person in their right mind would spend time here eludes you. A path through\nthe piles of refuse can be seen branching north and east. The exit, and escape\nfrom the smell, lie to the west.",
   "exits": {
-    "n": 2,
-    "s": 3,
-    "e": 4,
-    "w": 5
+    "n": 211,
+    "e": 224,
+    "w": 222
   },
   "items": {
     

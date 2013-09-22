@@ -1,11 +1,9 @@
 {
-  "name": "Room 4",
-  "description": "Description for room 4",
+  "name": "%DARK_GRAY%Deep in %YELLOW%the City Dump",
+  "description": "You feel as though you've forgotten what %TEAL%fresh air%GAME_TEXT_COLOR% smells like. This section of\nthe %YELLOW%dump%GAME_TEXT_COLOR% is easily the most %MAGENTA%repulsive%GAME_TEXT_COLOR% thing you have ever experienced, and you\nare fairly certain you will be %RED%sick%GAME_TEXT_COLOR% if you do not leave soon.",
   "exits": {
-    "n": 2,
-    "s": 3,
-    "e": 4,
-    "w": 5
+    "s": 209,
+    "w": 203
   },
   "items": {
     
