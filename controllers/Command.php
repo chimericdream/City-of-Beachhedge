@@ -127,6 +127,8 @@ class Command {
             case 'w':
                 if ($this->_game->getCurrentRoom()->hasExit($this->_cmd['command'])) {
                     $this->_game->changeRoom($this->_game->getCurrentRoom()->getRoomNumber($this->_cmd['command']));
+                } else {
+                    echo ERROR_TEXT_COLOR . 'You don\'t see an exit that way!' . GAME_TEXT_COLOR . "\n";
                 }
                 break;
 //            case 'get':
