@@ -145,5 +145,6 @@ class Command {
             case 'examine':
                 break;
         }
+        echo "\n";
     }
 }
