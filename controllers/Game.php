@@ -1,6 +1,8 @@
 <?php
 require_once dirname(__FILE__) . '/../models/CobCommon.php';
+require_once dirname(__FILE__) . '/../models/CreatureInterface.php';
 require_once dirname(__FILE__) . '/Command.php';
+require_once dirname(__FILE__) . '/Combat.php';
 require_once dirname(__FILE__) . '/../models/Room.php';
 require_once dirname(__FILE__) . '/../models/Character.php';
 require_once dirname(__FILE__) . '/../models/Entity.php';
@@ -15,6 +17,8 @@ class Game extends CobCommon {
     private $_input       = NULL;
     private $_currentRoom = NULL;
 
+    private $_character   = NULL;
+
     public function __construct() {
         $this->_input = fopen("php://stdin","r");
         if (empty($this->_input)) {
@@ -24,6 +28,8 @@ class Game extends CobCommon {
     }
 
     public function initialize() {
+        srand();
+        $this->_character = new Character();
         for ($r = 1; $r <=225; $r++) {
             $this->_rooms[$r] = new Room($r);
         }
@@ -32,9 +38,9 @@ class Game extends CobCommon {
 
     public function run() {
         echo TEAL_BRIGHT . 'Please enter your name: ' . GAME_INPUT_COLOR;
-        $this->characterName = $this->_getInput(self::FULL_LINE_COMMAND);
+        $this->_character->name = $this->_getInput(self::FULL_LINE_COMMAND);
 
-        echo GAME_TEXT_COLOR . 'Hello, ' . CHARACTER_NAME_COLOR . $this->characterName . GAME_TEXT_COLOR . "!\n\n"
+        echo GAME_TEXT_COLOR . 'Hello, ' . CHARACTER_NAME_COLOR . $this->_character->name . GAME_TEXT_COLOR . "!\n\n"
            . "Welcome to the world of Pannotia and the City of Beachhedge. Look around,\n"
            . 'explore, and have fun! If you need help at any time, type ' . GAME_COMMAND_COLOR . 'help' . GAME_TEXT_COLOR . ' or ' . GAME_COMMAND_COLOR . 'commands' . GAME_TEXT_COLOR . ".\n\n";
 
@@ -92,7 +98,8 @@ class Game extends CobCommon {
     }
 
     public function runCombat($enemy) {
-        $enemy->kill();
+        $combat = new Combat($this->_character, $enemy);
+        $combat->run();
     }
 
     public function entityInRoom($keyword) {

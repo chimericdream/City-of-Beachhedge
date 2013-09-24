@@ -61,4 +61,8 @@ abstract class CobCommon {
         }
         return $input;
     }
+
+    protected function getAbilityModifier($ability) {
+        return floor(($ability - 10) / 2);
+    }
 }
