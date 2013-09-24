@@ -1,12 +1,14 @@
 <?php
 class Character extends CobCommon implements CreatureInterface {
     public $name = '';
-    protected $_baseAtk      = 10;
-    protected $_weaponDamage = 12;
-    protected $_armorClass   = 15;
-    protected $_hitPoints    = 100;
-    protected $_hpMax        = 100;
-    protected $_charAttrs    = array(
+    protected $_lastHitWasCrit = false;
+    protected $_baseAtk        = 10;
+    protected $_threatRange    = 20;
+    protected $_weaponDamage   = 12;
+    protected $_armorClass     = 15;
+    protected $_hitPoints      = 100;
+    protected $_hpMax          = 100;
+    protected $_charAttrs      = array(
         'STR' => 18,
         'DEX' => 16,
         'CON' => 16,
@@ -18,7 +20,12 @@ class Character extends CobCommon implements CreatureInterface {
     public function getAttackRoll() {
         $strMod = $this->getAbilityModifier($this->_charAttrs['STR']);
         $d20 = rand(1,20);
+        $this->_lastHitWasCrit = (bool) ($d20 >= $this->_threatRange);
         return $this->_baseAtk + $strMod + $d20;
+    }
+
+    public function getCritical() {
+        return $this->_lastHitWasCrit;
     }
 
     public function getDamage() {

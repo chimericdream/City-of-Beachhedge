@@ -26,15 +26,21 @@ class Combat {
                 echo "\n";
             }
 
-            $atk = $init[$currPlayer]->getAttackRoll();
-            $ac  = $init[$currEnemy]->getAc();
+            $atk  = $init[$currPlayer]->getAttackRoll();
+            $crit = $init[$currPlayer]->getCritical();
+            $ac   = $init[$currEnemy]->getAc();
+            $critTxt = '';
             if ($atk >= $ac) {
                 $dmg = $init[$currPlayer]->getDamage();
+                if ($crit) {
+                    $dmg *= 2;
+                    $critTxt = 'critically ';
+                }
                 $init[$currEnemy]->damage($dmg);
                 if ($init[$currPlayer] instanceof Character) {
-                    echo "You hit {$this->_enemy->shortName}";
+                    echo "You {$critTxt}hit {$this->_enemy->shortName}";
                 } else {
-                    echo "{$this->_enemy->shortName} hits you";
+                    echo "{$this->_enemy->shortName} {$critTxt}hits you";
                 }
                 echo " for {$dmg} damage!\n";
             } else {
@@ -52,6 +58,7 @@ class Combat {
             if ($this->_enemy->getHp() <= 0) {
                 echo "You have managed to kill {$this->_enemy->shortName}!\n";
                 $this->_player->heal(999);
+                $this->_enemy->kill();
                 break;
             }
 

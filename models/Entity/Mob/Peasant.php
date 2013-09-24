@@ -1,6 +1,7 @@
 <?php
 class Entity_Mob_Peasant extends Entity_Mob {
     protected $_baseAtk      = 1;
+    protected $_threatRange  = 20;
     protected $_weaponDamage = 12;
     protected $_armorClass   = 12;
     protected $_hitPoints    = 50;

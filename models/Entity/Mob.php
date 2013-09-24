@@ -4,6 +4,7 @@ abstract class Entity_Mob extends Entity implements CreatureInterface {
     const STATE_DEAD  = 0;
 
     protected $_currentState = self::STATE_ALIVE;
+    protected $_lastHitWasCrit = false;
 
     public function __get($name) {
         if ($this->_currentState == self::STATE_DEAD && $name == 'longDesc') {
@@ -27,9 +28,14 @@ abstract class Entity_Mob extends Entity implements CreatureInterface {
     public function getAttackRoll() {
         $strMod = $this->getAbilityModifier($this->_charAttrs['STR']);
         $d20 = rand(1,20);
+        $this->_lastHitWasCrit = (bool) ($d20 >= $this->_threatRange);
         return $this->_baseAtk + $strMod + $d20;
     }
     
+    public function getCritical() {
+        return $this->_lastHitWasCrit;
+    }
+
     public function getDamage() {
         $strMod = $this->getAbilityModifier($this->_charAttrs['STR']);
         $dieRoll = rand(1, $this->_weaponDamage);
