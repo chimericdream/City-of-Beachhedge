@@ -1,5 +1,16 @@
 <?php
 class Entity_Mob_Peasant extends Entity_Mob {
+    protected $_baseAtk    = 1;
+    protected $_armorClass = 12;
+    protected $_attributes = array(
+        'STR' => 12,
+        'DEX' => 10,
+        'CON' => 12,
+        'INT' => 12,
+        'WIS' => 8,
+        'CHA' => 10,
+    );
+
     protected $_defaults = array(
         'name'         => 'A simple-looking peasant',
         'shortName'    => 'A peasant',

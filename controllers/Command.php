@@ -10,12 +10,15 @@ class Command {
         'open',
         'close',
 //        'drop',
+        'k',
         'kill',
         'exa',
         'examine',
     );
 
-    private $_cmd = NULL;
+    private $_cmd     = NULL;
+    private $_entity1 = NULL;
+    private $_entity2 = NULL;
 
     public function __construct($c, Game $g) {
         $this->_cmd  = $c;
@@ -65,7 +68,8 @@ class Command {
                     echo ERROR_TEXT_COLOR . 'What do you want to open?' . GAME_TEXT_COLOR . "\n\n";
                     return false;
                 }
-                if (!$this->_game->heldInHand($item) && !$this->_game->presentInRoom($item)) {
+                $this->_entity1 = array_shift($this->_cmd['params']);
+                if (!$this->_game->heldInHand($this->_entity1) && !$this->_game->presentInRoom($this->_entity1)) {
                     echo ERROR_TEXT_COLOR . 'Nothing here to open.' . GAME_TEXT_COLOR . "\n\n";
                     return false;
                 }
@@ -75,8 +79,8 @@ class Command {
                     echo ERROR_TEXT_COLOR . 'What do you want to close?' . GAME_TEXT_COLOR . "\n\n";
                     return false;
                 }
-                $item = array_shift($this->_cmd['params']);
-                if (!$this->_game->heldInHand($item) && !$this->_game->presentInRoom($item)) {
+                $this->_entity1 = array_shift($this->_cmd['params']);
+                if (!$this->_game->heldInHand($this->_entity1) && !$this->_game->presentInRoom($this->_entity1)) {
                     echo ERROR_TEXT_COLOR . 'Nothing here to close.' . GAME_TEXT_COLOR . "\n\n";
                     return false;
                 }
@@ -92,13 +96,14 @@ class Command {
 //                    return false;
 //                }
 //                break;
+            case 'k':
             case 'kill':
                 if (empty($this->_cmd['params'])) {
                     echo ERROR_TEXT_COLOR . 'What do you want to kill?' . GAME_TEXT_COLOR . "\n\n";
                     return false;
                 }
-                $enemy = array_shift($this->_cmd['params']);
-                if (!$this->_game->presentInRoom($enemy)) {
+                $this->_entity1 = array_shift($this->_cmd['params']);
+                if (!$this->_game->presentInRoom($this->_entity1)) {
                     echo ERROR_TEXT_COLOR . 'Nobody here by that name.' . GAME_TEXT_COLOR . "\n\n";
                     return false;
                 }
@@ -141,7 +146,13 @@ class Command {
                 break;
 //            case 'drop':
 //                break;
+            case 'k':
             case 'kill':
+                $mob         = $this->_game->entityInRoom($this->_entity1);
+                $canBeKilled = $mob->canKill();
+                if ($canBeKilled) {
+                    $this->_game->runCombat($mob);
+                }
                 break;
             case 'exa':
             case 'examine':

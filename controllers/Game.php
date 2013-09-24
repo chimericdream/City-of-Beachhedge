@@ -91,22 +91,33 @@ class Game extends CobCommon {
        echo "\n";
     }
 
-    public function presentInRoom($keyword) {
+    public function runCombat($enemy) {
+        $enemy->kill();
+    }
+
+    public function entityInRoom($keyword) {
         foreach ($this->_currentRoom->getItems() as $item) {
             foreach ($item->keywords as $k) {
                 if ($k == $keyword) {
-                    return true;
+                    return $item;
                 }
             }
         }
         foreach ($this->_currentRoom->getMobs() as $mob) {
             foreach ($mob->keywords as $k) {
                 if ($k == $keyword) {
-                    return true;
+                    return $mob;
                 }
             }
         }
         return false;
+    }
+
+    public function presentInRoom($keyword) {
+        if ($this->entityInRoom($keyword) === false) {
+            return false;
+        }
+        return true;
     }
 
     public function heldInHand($keyword) {
