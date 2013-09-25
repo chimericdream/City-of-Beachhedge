@@ -1,6 +1,6 @@
 {
   "name": "The %BLUE_BRIGHT%Fountain%GAME_TEXT_COLOR% at the Center of %YELLOW%Town Square",
-  "description": "The fountain appears to be the focal point of the town square and city market. Children are playing in the water, and several citizens are resting on chairs around the prominent landmark, seemingly oblivious to the goings-on around them.The %BLUE_BRIGHT%fountain%GAME_TEXT_COLOR% appears to be the focal point of the %YELLOW%town square%GAME_TEXT_COLOR% and %GREEN%city market%GAME_TEXT_COLOR%.\nChildren are playing in the %BLUE%water%GAME_TEXT_COLOR%, and several citizens are resting on chairs\naround the prominent landmark, seemingly oblivious to the goings-on around them.",
+  "description": "The %BLUE_BRIGHT%fountain%GAME_TEXT_COLOR% appears to be the focal point of the %YELLOW%town square%GAME_TEXT_COLOR% and %GREEN%city market%GAME_TEXT_COLOR%.\nChildren are playing in the %BLUE%water%GAME_TEXT_COLOR%, and several citizens are resting on chairs\naround the prominent landmark, seemingly oblivious to the goings-on around them.",
   "exits": {
     "n": 96,
     "s": 119,
