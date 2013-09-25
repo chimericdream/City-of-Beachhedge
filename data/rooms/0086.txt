@@ -2,10 +2,7 @@
   "name": "%BLUE%Fountain Road%GAME_TEXT_COLOR% at the Northern Entrance to the %YELLOW%Town Square",
   "description": "The street begins to widen here, opening onto a wide space filled\nwith people. Zombie servants seem to be everywhere, performing various mundane\ntasks for their masters. Stalls and vendor carts form an unbroken line around\nthe outer edge of the market, creating a vast shopping area for the citizens of\nBeachhedge.",
   "exits": {
-    "n": 76,
-    "s": 96,
-    "e": 87,
-    "w": 85
+    "s": 96
   },
   "items": {
     

@@ -2,7 +2,6 @@
   "name": "%YELLOW_BRIGHT%Market Way",
   "description": "This road is bustling with activity. Vendors selling everything from jewelry\nto fish to exotic spices from every corner of Pannotia are hawking their wares\nall about you. The sights and sounds are almost overwhelming. The sounds of a rowdy\nparty stream from an open door to the north.",
   "exits": {
-    "n": 93,
     "e": 104,
     "w": 102
   },

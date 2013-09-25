@@ -3,7 +3,6 @@
   "description": "It is immediately apparent that you are in the rich part of the city. Large\nhouses sit well back from the street, and high iron gates keep out those the\nowners deem undesirable. The road is lined with flowering plants of many\nshapes and sizes.",
   "exits": {
     "n": 180,
-    "s": 198,
     "e": 191,
     "w": 189
   },

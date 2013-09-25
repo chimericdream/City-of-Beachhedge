@@ -2,7 +2,6 @@
   "name": "The Street of %GREEN_BRIGHT%Green%GAME_TEXT_COLOR% and %YELLOW_BRIGHT%Gold",
   "description": "Contrary to its name, the northern district of Beachhedge is home to some of the\nless savory types of people in the city. As you hurry past closed doors and dark\nalleys, you begin to wonder if you shouldn't turn back.",
   "exits": {
-    "s": 35,
     "e": 18,
     "w": 16
   },

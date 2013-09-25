@@ -3,8 +3,7 @@
   "description": "The street begins to widen here, opening onto a wide space filled\nwith people. Zombie servants seem to be everywhere, performing various mundane\ntasks for their masters. Stalls and vendor carts form an unbroken line around\nthe outer edge of the market, creating a vast shopping area for the citizens of\nBeachhedge.",
   "exits": {
     "n": 119,
-    "s": 139,
-    "e": 130
+    "s": 139
   },
   "items": {
     
