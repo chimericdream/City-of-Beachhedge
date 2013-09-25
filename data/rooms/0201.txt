@@ -3,7 +3,7 @@
   "description": "The path here seems to be well traveled. You come across the occasional undead\nservant carrying bags of what you can only assume to be garbage, judging by the\nterrible odor emanating from their cargo.",
   "exits": {
     "n": 199,
-    "s": 209
+    "s": 206
   },
   "items": {
     

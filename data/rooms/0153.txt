@@ -2,7 +2,7 @@
   "name": "The %YELLOW%Eastern Road",
   "description": "The road here follows the eastern wall of Beachhedge. On the other side, you can\nsee rolling fields leading to distant mountains. A number of modest sized houses\nline the road.",
   "exits": {
-    "n": 12,
+    "n": 142,
     "s": 166
   },
   "items": {

@@ -44,7 +44,7 @@ class Game extends CobCommon {
            . "Welcome to the world of Pannotia and the City of Beachhedge. Look around,\n"
            . 'explore, and have fun! If you need help at any time, type ' . GAME_COMMAND_COLOR . 'help' . GAME_TEXT_COLOR . ' or ' . GAME_COMMAND_COLOR . 'commands' . GAME_TEXT_COLOR . ".\n\n";
 
-        $this->_currentRoom = $this->_rooms[1];
+        $this->_currentRoom = $this->_rooms[108];
         while (true) {
             $this->_currentRoom->display();
 
