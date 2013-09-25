@@ -1,11 +1,9 @@
 {
-  "name": "Room 4",
-  "description": "Description for room 4",
+  "name": "A %DARK_GRAY%Dingy%GAME_TEXT_COLOR% Path Leading from the City",
+  "description": "This dark path does not appear to be kept up very well, in stark contrast to the\narea you just left behind. It does, however, seem to be well traveled, as there\nare many sets of footprints leading away from the city and just as many sets\nreturning.",
   "exits": {
-    "n": 2,
-    "s": 3,
-    "e": 4,
-    "w": 5
+    "n": 196,
+    "s": 201
   },
   "items": {
     

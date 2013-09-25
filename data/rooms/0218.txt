@@ -1,11 +1,9 @@
 {
-  "name": "Room 4",
-  "description": "Description for room 4",
+  "name": "A %DARK_GRAY%Dingy%GAME_TEXT_COLOR%, Well-Trodden %YELLOW%Path",
+  "description": "The path here seems to be well traveled. You come across the occasional undead\nservant carrying bags of what you can only assume to be garbage, judging by the\nterrible odor emanating from their cargo.",
   "exits": {
-    "n": 2,
-    "s": 3,
-    "e": 4,
-    "w": 5
+    "e": 219,
+    "w": 217
   },
   "items": {
     

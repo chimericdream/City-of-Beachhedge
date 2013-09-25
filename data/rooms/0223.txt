@@ -1,6 +1,6 @@
 {
-  "name": "%DARK_GRAY%Entrance to the %YELLOW%City Dump",
-  "description": "You are nearly sick from the powerful odors rising from mounds of garbage. Why\nany person in their right mind would spend time here eludes you. A path through\nthe piles of refuse can be seen branching north and east. The exit, and escape\nfrom the smell, lie to the west.",
+  "name": "A %DARK_GRAY%Dingy%GAME_TEXT_COLOR%, Well-Trodden %YELLOW%Path",
+  "description": "The path here seems to be well traveled. You come across the occasional undead\nservant carrying bags of what you can only assume to be garbage, judging by the\nterrible odor emanating from their cargo.",
   "exits": {
     "n": 211,
     "e": 224,
