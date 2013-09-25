@@ -1,11 +1,9 @@
 {
-  "name": "Room 3",
-  "description": "Description for room 3",
+  "name": "%BLUE%Fountain Road",
+  "description": "Named for the prominent feature in the town square, this road is lined with\nfresh flowers and a small artificial waterway. It stretches from the town square\nsouthward toward the wealthy district.",
   "exits": {
-    "n": 2,
-    "s": 3,
-    "e": 4,
-    "w": 5
+    "n": 129,
+    "s": 149
   },
   "items": {
     

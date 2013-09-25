@@ -1,11 +1,10 @@
 {
-  "name": "Room 3",
-  "description": "Description for room 3",
+  "name": "%BLUE%Fountain Road%GAME_TEXT_COLOR% at the %GREEN%Entrance to the %GREEN_BRIGHT%City Park",
+  "description": "Named for the prominent feature in the town square, this road is lined with\nfresh flowers and a small artificial waterway. It stretches from the town square\nsouthward toward the wealthy district. From the east, the smell of fresh cut\ngrass wafts in on the breeze.",
   "exits": {
-    "n": 2,
-    "s": 3,
-    "e": 4,
-    "w": 5
+    "n": 149,
+    "s": 173,
+    "e": 161
   },
   "items": {
     
