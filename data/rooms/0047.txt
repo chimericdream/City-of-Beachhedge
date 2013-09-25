@@ -1,11 +1,10 @@
 {
-  "name": "Room 1",
-  "description": "Description for room 1",
+  "name": "%TEAL%Harbor Road%GAME_TEXT_COLOR% at the Entrance to the %BLUE_BRIGHT%City Docks",
+  "description": "This road stretches from the northern parts of Beachhedge, past the city %BLUE_BRIGHT%docks%GAME_TEXT_COLOR%,\nand all the way to the southern part of the city, where the wealthiest people\nlive. The %BLUE_BRIGHT%City Docks%GAME_TEXT_COLOR% lie due west, down a rickety set of stairs.",
   "exits": {
-    "n": 2,
-    "s": 3,
-    "e": 4,
-    "w": 5
+    "n": 31,
+    "s": 57,
+    "w": 46
   },
   "items": {
     

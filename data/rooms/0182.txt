@@ -1,11 +1,9 @@
 {
-  "name": "Room 3",
-  "description": "Description for room 3",
+  "name": "The Intersection of %TEAL%Harbor Road%GAME_TEXT_COLOR% and %GREEN_BRIGHT%Emerald Way",
+  "description": "This road stretches from the northern parts of Beachhedge, past the city %BLUE_BRIGHT%docks%GAME_TEXT_COLOR%,\nand all the way to the southern part of the city, where the wealthiest people\nlive. The %TEAL%ocean%GAME_TEXT_COLOR% can be seen to the west, and the %YELLOW_BRIGHT%castle%GAME_TEXT_COLOR% lies to the east.",
   "exits": {
-    "n": 2,
-    "s": 3,
-    "e": 4,
-    "w": 5
+    "n": 178,
+    "e": 183
   },
   "items": {
     

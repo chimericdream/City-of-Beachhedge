@@ -1,11 +1,9 @@
 {
-  "name": "Room 2",
-  "description": "Description for room 2",
+  "name": "%TEAL%Harbor Road",
+  "description": "This road stretches from the northern parts of Beachhedge, past the city %BLUE_BRIGHT%docks%GAME_TEXT_COLOR%,\nand all the way to the southern part of the city, where the wealthiest people\nlive. The %TEAL%ocean%GAME_TEXT_COLOR% can be seen to the west.",
   "exits": {
-    "n": 2,
-    "s": 3,
-    "e": 4,
-    "w": 5
+    "n": 116,
+    "s": 133
   },
   "items": {
     

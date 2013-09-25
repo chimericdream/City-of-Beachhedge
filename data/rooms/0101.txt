@@ -1,11 +1,10 @@
 {
-  "name": "Room 2",
-  "description": "Description for room 2",
+  "name": "The Intersection of %TEAL%Harbor Road%GAME_TEXT_COLOR% and %YELLOW_BRIGHT%Market Way",
+  "description": "The %TEAL%Harbor Road%GAME_TEXT_COLOR% can be seen stretching to the north and south from here. The\ncity center and the town square lie due east, down a bustling street crowded\nwith vendors.",
   "exits": {
-    "n": 2,
-    "s": 3,
-    "e": 4,
-    "w": 5
+    "n": 92,
+    "s": 117,
+    "e": 102
   },
   "items": {
     
