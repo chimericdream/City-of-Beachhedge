@@ -1,11 +1,10 @@
 {
-  "name": "Room 2",
-  "description": "Description for room 2",
+  "name": "%YELLOW_BRIGHT%Market Way%GAME_TEXT_COLOR% at the Western Entrance to the %YELLOW%Town Square",
+  "description": "The crowded market street begins to widen here, opening onto a wide space filled\nwith people. Zombie servants seem to be everywhere, performing various mundane\ntasks for their masters. Stalls and vendor carts form an unbroken line around\nthe outer edge of the market, creating a vast shopping area for the citizens of\nBeachhedge.",
   "exits": {
-    "n": 2,
-    "s": 3,
-    "e": 4,
-    "w": 5
+    "n": 94,
+    "e": 107,
+    "w": 105
   },
   "items": {
     

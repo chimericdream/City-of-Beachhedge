@@ -1,11 +1,9 @@
 {
-  "name": "Room 2",
-  "description": "Description for room 2",
+  "name": "%YELLOW_BRIGHT%Market Way",
+  "description": "This road is bustling with activity. Vendors selling everything from jewelry\nto fish to exotic spices from every corner of Pannotia are hawking their wares\nall about you. The sights and sounds are almost overwhelming.",
   "exits": {
-    "n": 2,
-    "s": 3,
-    "e": 4,
-    "w": 5
+    "e": 114,
+    "w": 112
   },
   "items": {
     
