@@ -1,11 +1,9 @@
 {
-  "name": "Room 3",
-  "description": "Description for room 3",
+  "name": "The %YELLOW%Eastern Road",
+  "description": "The road here follows the eastern wall of Beachhedge. On the other side, you can\nsee rolling fields leading to distant mountains. A number of modest sized houses\nline the road.",
   "exits": {
-    "n": 2,
-    "s": 3,
-    "e": 4,
-    "w": 5
+    "n": 12,
+    "s": 166
   },
   "items": {
     

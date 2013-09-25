@@ -1,11 +1,10 @@
 {
-  "name": "Room 2",
-  "description": "Description for room 2",
+  "name": "The Intersection of the %YELLOW%Eastern Road%GAME_TEXT_COLOR% and %YELLOW_BRIGHT%Market Way",
+  "description": "The road here follows the eastern wall of Beachhedge. On the other side, you can\nsee rolling fields leading to distant mountains. A number of modest sized houses\nline the road. The city center and the town square lie due west, down a bustling\nstreet crowded with vendors.",
   "exits": {
-    "n": 2,
-    "s": 3,
-    "e": 4,
-    "w": 5
+    "n": 100,
+    "s": 122,
+    "w": 114
   },
   "items": {
     
