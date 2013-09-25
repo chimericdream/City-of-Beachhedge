@@ -1,11 +1,11 @@
 {
-  "name": "Room 2",
-  "description": "Description for room 2",
+  "name": "The %YELLOW%Town Square%GAME_TEXT_COLOR% and %GREEN%City Market",
+  "description": "The air is buzzing with activity. It doesn't help that many of the market's\npatrons are undead creatures serving their owners, but that's Beachhedge.\nVendors selling all sorts of items vie for your attention as you make your way\nthrough the crowd.",
   "exits": {
-    "n": 2,
-    "s": 3,
-    "e": 4,
-    "w": 5
+    "n": 86,
+    "s": 108,
+    "e": 97,
+    "w": 95
   },
   "items": {
     
