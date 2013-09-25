@@ -1,11 +1,10 @@
 {
-  "name": "Room 1",
-  "description": "Description for room 1",
+  "name": "The Street of %GREEN_BRIGHT%Green%GAME_TEXT_COLOR% and %YELLOW_BRIGHT%Gold",
+  "description": "Contrary to its name, the northern district of Beachhedge is home to some of the\nless savory types of people in the city. As you hurry past closed doors and dark\nalleys, you begin to wonder if you shouldn't turn back.",
   "exits": {
-    "n": 2,
-    "s": 3,
-    "e": 4,
-    "w": 5
+    "s": 32,
+    "e": 10,
+    "w": 8
   },
   "items": {
     

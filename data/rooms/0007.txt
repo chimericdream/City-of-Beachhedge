@@ -1,11 +1,9 @@
 {
-  "name": "Room 1",
-  "description": "Description for room 1",
+  "name": "The Corner of %TEAL%Harbor Road%GAME_TEXT_COLOR% and the Street of %GREEN_BRIGHT%Green%GAME_TEXT_COLOR% and %YELLOW_BRIGHT%Gold",
+  "description": "To the east lies a run-down street, cheerfully (and paradoxically) named %GREEN_BRIGHT%Green%GAME_TEXT_COLOR%\nand %YELLOW_BRIGHT%Gold%GAME_TEXT_COLOR%. To the west lies the water, and you can see %TEAL%docks%GAME_TEXT_COLOR% jutting out from the\nroad a little ways south.",
   "exits": {
-    "n": 2,
-    "s": 3,
-    "e": 4,
-    "w": 5
+    "s": 31,
+    "e": 8
   },
   "items": {
     
