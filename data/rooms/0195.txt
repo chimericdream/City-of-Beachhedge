@@ -1,11 +1,9 @@
 {
-  "name": "Room 4",
-  "description": "Description for room 4",
+  "name": "%GREEN_BRIGHT%Emerald Way",
+  "description": "It is immediately apparent that you are in the rich part of the city. Large\nhouses sit well back from the street, and high iron gates keep out those the\nowners deem undesirable. The road is lined with flowering plants of many\nshapes and sizes.",
   "exits": {
-    "n": 2,
-    "s": 3,
-    "e": 4,
-    "w": 5
+    "e": 196,
+    "w": 194
   },
   "items": {
     

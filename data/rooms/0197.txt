@@ -1,11 +1,9 @@
 {
-  "name": "Room 4",
-  "description": "Description for room 4",
+  "name": "Where %GREEN_BRIGHT%Emerald Way%GAME_TEXT_COLOR% Meets the %YELLOW%Eastern Road",
+  "description": "You can tell you have entered the rich part of the city. Large houses line the\nstreet to the west, high iron gates standing erect in front of them. The road to\nthe north appears pleasant, if less well kept than the one to the west.",
   "exits": {
-    "n": 2,
-    "s": 3,
-    "e": 4,
-    "w": 5
+    "n": 181,
+    "w": 196
   },
   "items": {
     
